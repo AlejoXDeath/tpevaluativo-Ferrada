@@ -3,19 +3,24 @@ import { CommonModule } from '@angular/common';
 
 import { InicioRoutingModule } from './inicio-routing.module';
 import { CardComponent } from './components/card/card.component';
-import { InicioComponent } from './page/inicio/inicio.component';
-import { PageComponent } from './page/page.component';
+import { InicioComponent } from './page/inicio/inicio.component'; 
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
   declarations: [
-    CardComponent,
     InicioComponent,
-    PageComponent
+    CardComponent,
+    CarouselComponent
+
   ],
   imports: [
     CommonModule,
-    InicioRoutingModule
+    InicioRoutingModule,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class InicioModule { }
