@@ -1,0 +1,8 @@
+.inicio-container {
+    background-image: url(https://free4kwallpapers.com/uploads/originals/2022/07/16/-colorful-abstract-background-wallpaper.jpg);
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover; /* O puedes usar 'contain' si quieres que la imagen se ajuste dentro del contenedor */
+    background-position: center;
+    
+  }
