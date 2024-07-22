@@ -1,8 +1,9 @@
 export interface Juego {
-    id: string;
+    id: string | any;
     nombre: string;
     genero: string;
     edad: number;
     imagen: string;
     alt: string;
+    desc: string;
 }
