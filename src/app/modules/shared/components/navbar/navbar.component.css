@@ -6,7 +6,7 @@ mat-toolbar{
 }
   @media (min-width: 300px) and (max-width: 700px){
     mat-toolbar{
-        background-color: pink;
+        background-color: rgb(0, 57, 243);
     }
 
     #menuInicio{
@@ -32,11 +32,11 @@ mat-toolbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #ce0909;
     padding: 10px 20px;
 }
 
 .logo img {
-    height: 80px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }

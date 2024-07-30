@@ -1,30 +1,28 @@
 .container{
     display: flex;
-    padding: 10px;
-    justify-content: center;
-    border: 2px ;
+    padding: 10px;  
 }
+
 h1{
     text-align:center;
     color: #ffffff;
 }
 
+
 .contenido{
-    width: 400px;
+    width: 350px;
     display: inline-block;
-    padding: 15px;
+    padding: 3px;
     border-radius: 8px;
     margin: 10px;
-    border: 1px solid #2b41ff;
-    
+    border: 1px solid #ffffff;
+
 }
-
-
 p{
     padding: 5px;
 }
 
-@media (min-width: 300px) and (max-width: 700px){
+@media (min-width: 400px) and (max-width: 900px){
 
 }
 

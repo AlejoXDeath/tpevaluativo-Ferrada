@@ -10,17 +10,20 @@
               <mat-card-subtitle>Año de lanzamiento: {{i.edad}}</mat-card-subtitle>
             </mat-card-header>
             
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}">
+            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" class="img">
             <mat-card-content>
               <p>
                 Genero: {{i.genero}}
               </p>
               <p>
-                Descripción: {{i.desc}}
+                 {{i.desc}}
               </p>
+              
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button id="boton">Comprar</button>
+              
+              Precio: {{i.precio}}
+              <button mat-button id="boton">Añadir al carro</button>
             </mat-card-actions>
           </mat-card>
   
