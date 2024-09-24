@@ -9,11 +9,13 @@ import { MatCardModule } from '@angular/material/card';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
 
+
 @NgModule({
   declarations: [
     InicioComponent,
     CardComponent,
-    CarouselComponent
+    CarouselComponent,
+    
 
   ],
   imports: [
