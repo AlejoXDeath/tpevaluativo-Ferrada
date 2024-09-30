@@ -1,15 +1,19 @@
 <div class="row">
-    <div class="col-lg-3" *ngFor="let i of info ">
+  <div class="col-12 text-center mb-4">
+    <h1 style="color: white;">Juegos más vendidos</h1>
+  </div>
+    <div class="col-lg-3" *ngFor="let producto of coleccionProductos">
+      
       <div class="contenido">
+        
         <div class="card">
-          <img src="{{i.imagen}}" class="imagencard" alt="{{i.alt}}">
+          <img src="{{producto.imagen}}" class="imagencard" alt="{{producto.alt}}">
           <div class="card-body">
-            <h5 class="card-title"><b>{{i.nombre}}</b></h5>
-            <p class="card-text"><small class="text-body-secondary">{{i.edad}}</small></p>
-            <p class="card-text">{{i.desc}}</p>
-            <p class="card-text"><small class="text-body-secondary">ᴅᴇꜱᴀʀʀᴏʟʟᴀᴅᴏʀ:</small></p>
-            <p class="card-text"><small class="text-body-secondary">ᴇᴅɪᴛᴏʀ: </small></p>
-            <p><b>$ {{i.precio}} USD</b></p>
+            <h5 class="card-title"><b>{{producto.nombre}}</b></h5>
+            <p class="card-text"><small class="text-body-secondary">{{producto.edad}}</small></p>
+            <p class="card-text">{{producto.descripcion}}</p>
+            <p class="card-text"><small class="text-body-secondary">𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿:{{producto.desarrollador}}</small></p>
+            <p><b>$ {{producto.precio}} USD</b></p>
   
             <!-- Botón visual abajo del precio -->
             <button class="btn btn-primary btn-block" disabled>Comprar</button>

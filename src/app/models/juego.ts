@@ -7,4 +7,5 @@ export interface Juego {
     alt: string;
     desc: string;
     precio: string;
+    
 }

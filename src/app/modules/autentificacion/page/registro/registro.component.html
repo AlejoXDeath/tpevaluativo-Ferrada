@@ -2,7 +2,7 @@
     <div class="row">
         <h1>Registrate</h1>
 
-        <i class="material-icons" style="font-size: 200px">person</i>
+        <i id="person" class="material-icons" style="font-size: 200px">person</i>
            <!--Nombre de usuario-->
         <mat-form-field appearance="fill">
             <mat-label>Ingrese un nombre de usuario</mat-label>
@@ -48,6 +48,6 @@
           </mat-form-field>
 
           <!--Botón para enviar la información a la Base de Datos-->
-        
-    </div>
+          <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+    </div>  
 </div>
