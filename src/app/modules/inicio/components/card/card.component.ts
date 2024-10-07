@@ -73,5 +73,6 @@ export class CardComponent {
         desc: 'Eres un trabajador de una compañia y tu trabajo consiste en recolectar basura de lunas industrializadas abandonadas para cumplir con la cuota de ganancias de la Compañía.',
       },
     ];
+    
   }
 }
