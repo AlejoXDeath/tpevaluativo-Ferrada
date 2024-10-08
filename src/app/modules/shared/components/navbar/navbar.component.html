@@ -1,7 +1,5 @@
 <mat-toolbar>
-    <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
-        <mat-icon>menu</mat-icon>
-    </button>
+    
 
     <mat-menu #seccion="matMenu">
         <button mat-menu-item routerLink="/inicio">𝘐𝘯𝘪𝘤𝘪𝘰</button>
@@ -10,13 +8,13 @@
     
     <nav>
         <div class="logo">
-            <img src="../../../../../assets/logo.png" alt="Logo">
+            <img src="../../../../../assets/Epic Steam Store.png" alt="Logo">
         </div>
         <!-- Botón para la vista de inicio-->
 
     </nav>
-    <button mat-button routerLink="/inicio">𝘐𝘯𝘪𝘤𝘪𝘰</button>
-    <button mat-button routerLink="/producto">𝘗𝘳𝘰𝘥𝘶𝘤𝘵𝘰</button>
+    <button mat-button routerLink="/inicio">𝙸𝚗𝚒𝚌𝚒𝚘</button>
+    <button mat-button routerLink="/producto">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚘𝚜</button>
 
 
 
@@ -25,7 +23,7 @@
     <!--Inicio de sesión y el registro de un nuevo usuario-->
     <button mat-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
     <mat-menu #usuario="matMenu">
-        <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">registrarse</button>
+        <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
         <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar Sesión</button>
         <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado" > Cerrar Sesión</button>
     </mat-menu>

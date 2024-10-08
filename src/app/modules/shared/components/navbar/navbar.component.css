@@ -16,6 +16,10 @@ mat-toolbar{
     #menuProducto{
         display: none;
     }
+    .logo img{
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /* ENCAPSULA ESTILOS PARA PANTALLAS MÁS GRANDES -> ej.: computadora, televisor */
@@ -27,6 +31,10 @@ mat-toolbar{
     #menuSecciones{
         display: none;
     }
+    .logo img{
+        width: 200px;
+        height: 200px;
+    }
 }
 .navbar {
     display: flex;
@@ -36,7 +44,3 @@ mat-toolbar{
     padding: 10px 20px;
 }
 
-.logo img {
-    height: 150px;
-    width: 150px;
-}

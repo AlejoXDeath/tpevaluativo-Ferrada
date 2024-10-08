@@ -16,7 +16,7 @@ h1{
     border-radius: 8px;
     margin: 10px;
     border: 1px solid #ffffff;
-    box-shadow: 0 800px 1000px white;
+    box-shadow: 0 10px 10px white;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 p{

@@ -15,8 +15,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let producto of coleccionProductos">
-      <th scope="row">1</th>
+    <tr *ngFor="let producto of coleccionProductos; let i = index">
+      <th scope="row">{{i + 1}}</th>
 
       <td>
         <img
@@ -177,7 +177,7 @@
             class="form-control"
             type="text"
             formControlName="alt"
-            placeholder="Ej.: Foto del juego"
+            placeholder="Ej.: Portada de CyberPunk"
           />
         </div>
       </div>
@@ -283,7 +283,24 @@
             placeholder="{{ productoEdit.imagen }}"
           />
         </div>
-
+        <div class="mb-3">
+          <label class="form-label">Ingrese el Desarrollador</label>
+          <input
+            class="form-control"
+            type="text"
+            formControlName="desarrollador"
+            placeholder="{{ productoEdit.desarrollador }}"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese la fecha de lanzamiento:</label>
+          <input
+            class="form-control"
+            type="text"
+            formControlName="edad"
+            placeholder="{{ productoEdit.edad }}"
+          />
+        </div>
         <div class="mb-3">
           <label class="form-label"
             >Ingrese texto alternativo de la imagen:</label
