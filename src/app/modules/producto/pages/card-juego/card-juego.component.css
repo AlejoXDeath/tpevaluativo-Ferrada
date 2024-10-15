@@ -1,36 +1,23 @@
-h5{
-    text-align: center;
-}
-h2{
-    color: white;
-    text-align: center;
-}
-.imagencard{
-    width: 100%;
-    height: 135px;
-    border-radius: 2%;
-}
-.card{
-    width: 400px;
-    height: 600px;
-    display: block;
-}
-.contenido{
-    padding: 1%;
-    border-radius: 1%;
-    margin: 5%; 
-    border: 1px solid rgb(255, 0, 0);
-    display: flex;
-}   
-.mg-3{
-    text-align: center;
-    margin: 10px;
+.card {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Fondo degradado */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+  }
 
-}
-.d-block{
-    height: 450px;
-}
-.col-lg-12{
-    justify-content: center;
-    display: flex;
-}
+  .card:hover {
+    transform: translateY(-5px); /* Levantar tarjeta al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  }
+
+  .imagencard {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .parrafo {
+    max-height: 50px; /* Limitar altura del párrafo */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Dos líneas visibles */
+  }

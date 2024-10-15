@@ -1,46 +1,65 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-card-juego',
   templateUrl: './card-juego.component.html',
   styleUrls: ['./card-juego.component.css']
 })
 export class CardJuegoComponent {
-  // Colección de todos los productos de forma local
+  // Definimos colección de productos locales
   coleccionProductos: Producto[] = [];
-  // Colección de productos de una sola categoría
-  coleccionjuego: Producto[] = [];
-  // Variable para seleccionar productos específicos
+  coleccionJuegos: Producto[] = [];
+
+  // Variable local para manejar estado de un modal
   productoSeleccionado!: Producto;
-  // Variable para manejar estado del modal
+
+  // Variable local para manejar estado de un modal
   modalVisible: boolean = false;
-  // Patentamos de forma local el servicio para acceder en él
-  constructor(public servicioCrud: CrudService){}
-  // Inicializa al momento que renderiza el componente
-  ngOnInit(): void{
-    // Accedemos a método 'obtenerProducto' y nos subscribimos a los cambios
-    // recibimos notificación ante modificaciones
+
+  constructor(public servicioCrud: CrudService) {}
+
+  ngOnInit(): void {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
-      this.coleccionjuego = producto;
-      // Mostrará la colección de esa categoría hasta el momento
-      this.mostrarProductojuego();
-    })
+      this.coleccionProductos = producto;
+      this.mostrarProductosJuegos();
+    });
   }
-  // Función para filtrar los productos de tipo "jueog"
-  mostrarProductojuego(){
-    // Iteramos colección de productos con un 'forEach'
+
+  // Función para filtrar y ordenar los productos de tipo "juegos"
+  mostrarProductosJuegos() {
+    this.coleccionJuegos = []; // Reiniciar la colección
+
     this.coleccionProductos.forEach(producto => {
-      // Si es de tipo "alimentación" -> condicional
-      if(producto.categoria === "juego"){
-        // Lo sube/ guarda en la colección de productos de tipo "juego"
-        this.coleccionjuego.push(producto);
+      // Si no es de tipo "Dlc" o "Soundtracks", se añade a la colección de juegos
+      if (producto.categoria === "juego") {
+        this.coleccionJuegos.push(producto);
       }
-    })
+    });
+
+    // Ordenar la colección de juegos por nombre
+    this.coleccionJuegos.sort((a, b) => a.nombre.localeCompare(b.nombre));
   }
-  mostrarVer(info: Producto){
+
+  mostrarVer(info: Producto) {
     this.modalVisible = true;
     this.productoSeleccionado = info;
+  }
+
+  productoAnadido(producto: Producto) {
+    try {
+      Swal.fire({
+        title: 'Perfecto!',
+        text: `Ha añadido ${producto.nombre} al carrito`,
+        icon: 'info'
+      });
+    } catch (error) {
+      Swal.fire({
+        title: '¡Oh no!',
+        text: 'Ha ocurrido un error\n' + error,
+        icon: 'error'
+      });
+    }
   }
 }

@@ -1,36 +1,48 @@
-<div class="contenido" *ngFor="let producto of coleccionjuego">
-    <div class="card">
-        <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
-        <div class="card-body">
-            <h5 class="card-title">{{producto.imagen}}</h5>
-            <p class="card-text">{{producto.precio}}</p>
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" 
-            data-bs-target="#verMas" (click)="mostrarVer(producto)">Ver más</button>
+<div class="row g-4">
+    <div class="col-lg-3" *ngFor="let productos of coleccionJuegos">
+      <div class="contenido">
+        <div class="card text-center border-0 rounded-3 overflow-hidden shadow-lg">
+          <img src="{{productos.imagen}}" class="imagencard" alt="{{productos.alt}}">
+          <div class="card-body">
+            <h5 class="card-title text-primary"><b>{{productos.nombre}}</b></h5>
+            <p class="card-text"><small class="text-secondary">{{productos.edad}}</small></p>
+            
+            <p class="card-text"><small class="text-muted">Desarrollador: {{productos.desarrollador}}</small></p>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <p class="mb-0 text-success"><b>${{productos.precio}} USD</b></p>
+              <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#verMas"
+                (click)="mostrarVer(productos)">Ver más</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- Modal para ver más información -->
+  </div>
+  
+  <!-- Modal para ver más info -->
 <div class="modal fade" *ngIf="modalVisible" id="verMas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">{{productoSeleccionado.nombre}}</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
-                <div class="mb-3">
-                    {{productoSeleccionado.descripcion}}
-                </div>
-                <div class="mb-3">
-                    {{productoSeleccionado.precio}}
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Agregar al carrito</button>
-                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-            </div>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{productoSeleccionado.nombre}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body text-center">
+          <img class="img-fluid rounded" src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}">
+          
+          <h4 class="mt-3">Descripción</h4>
+          <p class="text-start">{{productoSeleccionado.descripcion}}</p> <!-- Descripción completa -->
+          
+          <h4 class="mt-3">Detalles</h4>
+          <p><strong>Edad recomendada:</strong> {{productoSeleccionado.edad}}</p>
+          <p><strong>Desarrollador:</strong> {{productoSeleccionado.desarrollador}}</p>
+          
+          <h4 class="mt-3 text-success">${{productoSeleccionado.precio}} USD</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
     </div>
-</div>
-**/
+  </div>

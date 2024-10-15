@@ -5,4 +5,23 @@
             height: 100%; /* Ocupar toda la altura */
             overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
         }
-        
+        .custom-select {
+            position: relative;
+            display: inline-block;
+            width: 100%; /* Asegura que la barra ocupe todo el ancho */
+          }
+          
+          .custom-select select {
+            padding-right: 30px; /* Deja espacio para la flecha */
+          }
+          
+          .arrow {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: solid transparent;
+            border-width: 6px 6px 0;
+            border-top-color: gray; /* Color de la flecha */
+            pointer-events: none; /* La flecha no interferirá con los clics */
+          }

@@ -24,7 +24,7 @@ export class CardComponent {
       this.coleccionProductos = producto;
     })
   }
-
+  
   mostrarVer(info: Producto){
     // Cambio estado del modal a true (Ahora es visible)
     this.modalVisible = true;
