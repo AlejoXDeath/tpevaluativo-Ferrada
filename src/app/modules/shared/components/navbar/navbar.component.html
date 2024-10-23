@@ -14,8 +14,17 @@
 
     </nav>
     <button mat-button routerLink="/inicio">𝙸𝚗𝚒𝚌𝚒𝚘</button>
-    <button mat-button routerLink="/producto">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚘𝚜</button>
-    <button mat-button routerLink="/juego">Juego</button>
+    <!-- Botón de Productos con menú desplegable -->
+  <button mat-button [matMenuTriggerFor]="productosMenu">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚘𝚜</button>
+  <mat-menu #productosMenu="matMenu">
+    <button mat-menu-item routerLink="/producto">Productos Generales</button>
+    <button mat-menu-item routerLink="/juego">Juegos</button>
+    <button mat-menu-item routerLink="/dlc">DLC</button>
+    <button mat-menu-item routerLink="/soundtracks">Soundtracks</button>
+  </mat-menu>
+
+    
+    <button mat-button routerLink="/soporte">𝚂𝚘𝚙𝚘𝚛𝚝𝚎</button>
 
 
 

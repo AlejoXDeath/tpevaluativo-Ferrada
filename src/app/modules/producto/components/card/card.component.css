@@ -1,0 +1,56 @@
+.card {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Fondo degradado */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levantar tarjeta al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.imagencard {
+    height: 150px;
+    object-fit: cover;
+}
+
+.description-container {
+    max-height: 100px; /* Altura máxima para la descripción */
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+    margin: 10px 0; /* Espaciado vertical */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.parrafo {
+    font-size: 14px; /* Tamaño de fuente */
+    margin: 0; /* Sin márgenes */
+    overflow: hidden; /* Ocultar desbordamiento */
+    text-overflow: ellipsis; /* Cortar texto que excede */
+    display: -webkit-box; /* Para mostrar como caja flexible */
+    -webkit-box-orient: vertical; /* Orientación vertical */
+}
+
+.modal-body p {
+    text-align: center; /* Centrar texto en el modal */
+    margin-bottom: 15px; /* Espacio debajo de los párrafos */
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Asegura que las tarjetas llenen el espacio */
+}
+
+.card {
+    flex: 1; /* Permite que todas las tarjetas crezcan uniformemente */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos internos se alineen verticalmente */
+}
+
+.card-body {
+    flex-grow: 1; /* Permite que el cuerpo de la tarjeta ocupe el espacio restante */
+}

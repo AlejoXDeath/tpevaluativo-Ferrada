@@ -1,3 +1,23 @@
-#footer{
-    background-color: rgba(4, 0, 241, 0.459); padding: 20px; text-align: center; color: #ffffff;
+#footer {
+    background-color: #1b2838; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    font-size: 14px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+#footer p {
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+}
+
+#footer a {
+    color: #c7d5e0; /* Color de enlaces */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Espacio entre enlaces */
+    transition: color 0.3s; /* Transición suave para hover */
+}
+
+#footer a:hover {
+    color: #7cfcff; /* Color al pasar el mouse */
 }
