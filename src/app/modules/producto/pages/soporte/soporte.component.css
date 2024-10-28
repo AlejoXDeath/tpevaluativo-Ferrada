@@ -5,8 +5,11 @@
   }
   
   h2 {
-    color: #007bff; /* Puedes mantener este color para el título principal */
+    color: #ffffff; /* Puedes mantener este color para el título principal */
   }
+  .custom-link {
+    color: #ffffff; /* Cambia este valor por el color que desees */
+}
   
   .list-group-item {
     background-color: rgba(0, 0, 0, 0.1); /* Fondo oscuro con un poco de opacidad */

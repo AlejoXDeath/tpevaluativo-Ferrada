@@ -1,6 +1,30 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+  .carrito-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #panel-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* Oculto inicialmente */
+    z-index: 999;
+  }
+  
+  .panel-visible {
+    transform: translateX(0); /* Muestra el panel */
+  }
 mat-toolbar{ 
     height: 80px;
 }

@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  isCollapsed: { [key: string]: boolean } = {
+    terminos: false,
+    privacidad: false,
+    contacto: false
+  };
 
+  toggleCollapse(section: string): void {
+    this.isCollapsed[section] = !this.isCollapsed[section];
+  }
 }
