@@ -110,6 +110,7 @@ export class IniciosesionComponent {
       password: this.usuarios.password
     }
 
+    
     try {
       // obtenemos usuario de la BD
       const usuarioBD = await this.servicioAuth.obtenerUsuario(credenciales.email);
@@ -182,6 +183,15 @@ export class IniciosesionComponent {
       email: this.usuarios.email = '',
       password: this.usuarios.password = ''
     }
+  }
+  olvidarContrasena() {
+    // Mostrar alerta de SweetAlert
+    Swal.fire({
+      title: 'Función en mantenimiento',
+      text: 'Esta función no está disponible en este momento.',
+      icon: 'info',
+      confirmButtonText: 'Aceptar'
+    });
   }
 
 }

@@ -1,25 +1,30 @@
-<div class="container"  >
-    <div class="row">
-        <i id="person" class="material-icons" style="font-size: 200px">person</i>
+<div class="container">
+  <div class="row">
+      <i id="person" class="material-icons" style="font-size: 200px">person</i>
 
-        <!--Intrese el email-->
-        <mat-form-field appearance="fill">
-            <mat-label>Ingrese su Email  </mat-label>
-            <input  [(ngModel)]="usuarios.email" matInput placeholder="Ej:pepe432@gmail.com" required>
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
- 
-        </mat-form-field>
+      <!-- Ingrese el email -->
+      <mat-form-field appearance="fill">
+          <mat-label>Ingrese su Email</mat-label>
+          <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: pepe432@gmail.com" required>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
 
-        <!--Ingrese su contraseña-->
-        <mat-form-field>
-            <mat-label>Ingrese su contraseña</mat-label>
-            <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'"#input minlength="6" required="">
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <!-- Ingrese su contraseña -->
+      <mat-form-field>
+          <mat-label>Ingrese su contraseña</mat-label>
+          <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-            <mat-hint align="start">Minimo:6/{{input.value.length}}</mat-hint>
-          </mat-form-field>
-          <!--Botón para Iniciar sesion-->
-          <button class="boton" mat-raised-button color="primary" (click)="iniciarSesion()">Iniciar sesion</button>
-    </div>
+          </button>
+          <mat-hint align="start">Mínimo: 6/{{input.value.length}}</mat-hint>
+      </mat-form-field>
+
+      <!-- Botón para Iniciar sesión -->
+      <button class="boton" (click)="iniciarSesion()">Iniciar sesión</button>
+
+<!-- Enlace para olvidar la contraseña -->
+<div class="forgot-password">
+    <button class="boton" (click)="olvidarContrasena()">Olvidé mi contraseña</button>
+</div>
+  </div>
 </div>

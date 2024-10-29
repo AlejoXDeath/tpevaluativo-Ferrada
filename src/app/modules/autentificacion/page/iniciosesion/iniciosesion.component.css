@@ -4,13 +4,51 @@
     text-align: center;
     justify-content: center;
 }
-.boton{
-    width: 120px;
-    margin: auto;
-}
+
 #person{
     color: white;
 }
 h1{
     color: white;
 }
+.boton {
+    background-color: #6b6b6b; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 12px 24px; /* Ajuste del espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    display: inline-block; /* Para ajustar el tamaño */
+    line-height: 1; /* Asegura que la altura de línea no sobresalga */
+}
+
+.boton:hover {
+    background-color: #3700b3; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.boton:focus {
+    outline: none; /* Sin contorno al hacer clic */
+}
+
+/* Estilos adicionales para el enlace de "Olvidé mi contraseña" */
+.forgot-password {
+    margin-top: 10px; /* Espacio entre el botón y el enlace */
+}
+
+.forgot-password .boton {
+    background-color: transparent; /* Fondo transparente para el enlace */
+    color: #6200ea; /* Color del texto del enlace */
+    text-decoration: underline; /* Subrayado para indicar que es un enlace */
+    padding: 0; /* Sin padding para que se vea como un enlace */
+    font-size: 14px; /* Tamaño de la fuente */
+}
+
+.forgot-password .boton:hover {
+    background-color: transparent; /* Sin cambio de fondo al pasar el mouse */
+    color: #3700b3; /* Color al pasar el mouse */
+}
+

@@ -6,6 +6,7 @@ import { JuegosComponent } from './pages/juegos/juegos.component';
 import { SoporteComponent } from './pages/soporte/soporte.component';
 import { DlcComponent } from './pages/dlc/dlc.component';
 import { SoundtrackComponent } from './pages/soundtrack/soundtrack.component';
+import { Faq1Component } from './pages/faq1/faq1.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,9 @@ const routes: Routes = [
   {
     path:"soundtrack",component:SoundtrackComponent
   },
+  {
+    path:"faq1",component:Faq1Component
+  }
 ];
 
 @NgModule({

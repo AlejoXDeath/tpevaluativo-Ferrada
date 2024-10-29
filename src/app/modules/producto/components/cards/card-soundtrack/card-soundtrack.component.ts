@@ -33,7 +33,7 @@ export class CardSoundtrackComponent {
 
     this.coleccionProductos.forEach(producto => {
       // Si no es de tipo "Dlc" o "Soundtracks", se añade a la colección de juegos
-      if (producto.categoria === "juego") {
+      if (producto.categoria === "Soundtrack") {
         this.coleccionSoundtrack.push(producto);
       }
     });
