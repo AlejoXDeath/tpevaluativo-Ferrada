@@ -1,13 +1,37 @@
-.container{
-    display: flex;
-    padding: 10px;  
-}
 
 h1{
     text-align:center;
     color: #ffffff;
 }
 
+.container {
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté en columna */
+    align-items: center; /* Centra horizontalmente el contenido */
+    padding: 10px;  
+}
+
+.row {
+    width: 100%; /* O ajusta según tu diseño */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro de la fila */
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards se ajusten en varias líneas */
+    justify-content: center; /* Centra las cards horizontalmente */
+}
+
+.card-wrapper {
+    margin: 10px; /* Espaciado entre cards */
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
 
 .contenido{
     width: 350px;
@@ -16,15 +40,16 @@ h1{
     border-radius: 8px;
     margin: 10px;
     border: 1px solid #ffffff;
-    box-shadow: 0 10px 10px white;
+    box-shadow: 0 10px 10px rgb(189, 189, 189);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 p{
     padding: 5px;
 }
 .contenido:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 16px #66bb6a;
 } 
 
 

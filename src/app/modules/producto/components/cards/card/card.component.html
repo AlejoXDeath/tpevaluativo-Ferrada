@@ -9,14 +9,16 @@
           <div class="description-container flex-grow-1">
             <p class="parrafo" id="text">{{productos.descripcion}}</p>
           </div>
-          <div class="d-flex justify-content-center align-items-center mt-3">                              
-            <p class="mb-0 text-success me-2"><b>${{productos.precio}} USD </b></p>
-            <button type="button" class="btn btn-outline-primary me-2" style="height: 38px;" data-bs-toggle="modal" data-bs-target="#verMas"
-              (click)="mostrarVer(productos)">Ver más</button>
-            <button type="button" class="btn btn-success" style="height: 38px;">
-              <mat-icon>shopping_cart</mat-icon>
-            </button>
-          </div>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <p class="mb-0 text-success" style="margin-right: auto;"><b>${{productos.precio}} USD</b></p>
+            <div class="d-flex">
+                <button type="button" class="btn btn-outline-primary me-2" style="height: 38px;" data-bs-toggle="modal" data-bs-target="#verMas"
+                    (click)="mostrarVer(productos)">Ver más</button>
+                <button type="button" class="btn btn-success" style="height: 38px;">
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
+            </div>
+        </div>
         </div>
       </div>
     </div>

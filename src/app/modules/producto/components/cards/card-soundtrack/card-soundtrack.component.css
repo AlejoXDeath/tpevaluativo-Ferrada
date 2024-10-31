@@ -1,0 +1,22 @@
+.card {
+    background: linear-gradient(135deg, #fbfde3, #fffde2); /* Fondo degradado */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+  }
+
+  .card:hover {
+    transform: translateY(-5px); /* Levantar tarjeta al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  }
+
+  .imagencard {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .parrafo {
+    max-height: 50px; /* Limitar altura del párrafo */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }

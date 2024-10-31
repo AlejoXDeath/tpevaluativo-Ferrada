@@ -1,5 +1,5 @@
 .card {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Fondo degradado */
+    background: linear-gradient(135deg, #fbfde3, #fffde2); /* Fondo degradado */
     transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
   }
 

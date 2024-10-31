@@ -5,3 +5,7 @@
   .text-custom-description {
     color: #ffffff; /* Negro para el texto */
   }
+  h1{
+    margin-top: 15px;
+  }
+  
