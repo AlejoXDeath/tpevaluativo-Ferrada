@@ -25,3 +25,12 @@
             border-top-color: gray; /* Color de la flecha */
             pointer-events: none; /* La flecha no interferirá con los clics */
           }
+          @media (min-width: 300px) and (max-width: 700px) {
+            th{
+            display: none;
+            }
+            td{
+                display: block;
+            }
+        
+        }

@@ -41,8 +41,8 @@ mat-toolbar{
         display: none;
     }
     .logo img{
-        width: 100px;
-        height: 100px;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -52,6 +52,9 @@ mat-toolbar{
         background-color: rgb(255, 255, 255);
     }
 
+    #menuSoporte{
+        display: none;
+    }
     #menuSecciones{
         display: none;
     }

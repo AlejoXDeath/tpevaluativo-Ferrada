@@ -1,29 +1,27 @@
 <mat-toolbar>
-    
+
 
     <mat-menu #seccion="matMenu">
-        <button mat-menu-item routerLink="/inicio">𝘐𝘯𝘪𝘤𝘪𝘰</button>
-        
+        <button mat-menu-item routerLink="/producto">Productos Generales</button>
+
     </mat-menu>
-    
+
     <nav>
         <div class="logo">
             <img src="../../../../../assets/Epic Steam Store.png" alt="Logo">
         </div>
-        <!-- Botón para la vista de inicio-->
-
     </nav>
-    <button mat-button routerLink="/inicio">𝙸𝚗𝚒𝚌𝚒𝚘</button>
+    <!-- Menú desplegable para cuando la pantalla sea menor a 700px -->
+    <button mat-button routerLink="/inicio" class="inicio">𝙸𝚗𝚒𝚌𝚒𝚘</button>
     <!-- Botón de Productos con menú desplegable -->
-  <button mat-button [matMenuTriggerFor]="productosMenu">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚘𝚜</button>
-  <mat-menu #productosMenu="matMenu">
-    <button mat-menu-item routerLink="/producto">Productos Generales</button>
-    <button mat-menu-item routerLink="/juego">Juegos</button>
-    <button mat-menu-item routerLink="/dlc">DLC</button>
-    <button mat-menu-item routerLink="/soundtrack">Soundtracks</button>
-  </mat-menu>
+    <button mat-button [matMenuTriggerFor]="productosMenu" class="productos">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚘𝚜</button>
+    <mat-menu #productosMenu="matMenu">
+        <button mat-menu-item routerLink="/producto">Productos Generales</button>
+        <button mat-menu-item routerLink="/juego">Juegos</button>
+        <button mat-menu-item routerLink="/dlc">DLC</button>
+        <button mat-menu-item routerLink="/soundtrack">Soundtracks</button>
+    </mat-menu>
 
-    
     <button mat-button routerLink="/soporte">𝚂𝚘𝚙𝚘𝚛𝚝𝚎</button>
 
 
@@ -36,7 +34,7 @@
     <mat-menu #usuario="matMenu">
         <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
         <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar Sesión</button>
-        <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado" > Cerrar Sesión</button>
+        <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado"> Cerrar Sesión</button>
     </mat-menu>
     <!--carrito-->
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
