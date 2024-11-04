@@ -1,40 +1,35 @@
-
-h1{
-    text-align:center;
-    color: #ffffff;
-}
-
-.container {
-    display: flex;
-    flex-direction: column; /* Asegura que el contenido esté en columna */
-    align-items: center; /* Centra horizontalmente el contenido */
-    padding: 10px;  
-}
-
-.row {
-    width: 100%; /* O ajusta según tu diseño */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos dentro de la fila */
-}
-
-.col {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las cards se ajusten en varias líneas */
-    justify-content: center; /* Centra las cards horizontalmente */
-}
-
-.card-wrapper {
-    margin: 10px; /* Espaciado entre cards */
-}
-
 h1 {
     text-align: center;
     color: #ffffff;
 }
 
-.contenido{
-    width: 350px;
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px;  
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.card-wrapper {
+    margin: 10px; 
+}
+
+.contenido {
+    width: 300px; /* Cambia a un tamaño más manejable */
+    max-width: 100%; /* Asegura que no exceda el contenedor */
     display: inline-block;
     padding: 3px;
     border-radius: 8px;
@@ -44,23 +39,33 @@ h1 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-p{
+p {
     padding: 5px;
 }
+
 .contenido:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 16px #66bb6a;
 } 
 
-
-@media (min-width: 400px) and (max-width: 900px){
-
+@media (max-width: 600px) {
+    .contenido {
+        width: 90%; /* Las cartas ocupan el 90% en pantallas pequeñas */
+    }
 }
 
-@media (min-width: 700px){
-
+@media (min-width: 600px) and (max-width: 900px) {
+    .contenido {
+        width: 45%; /* Dos cartas en fila en pantallas medianas */
+    }
 }
 
-#boton{
-  border: 1px solid #000000;
+@media (min-width: 900px) {
+    .contenido {
+        width: 30%; /* Tres cartas en fila en pantallas grandes */
+    }
+}
+
+#boton {
+    border: 1px solid #000000;
 }

@@ -1,0 +1,61 @@
+mat-card {
+    margin: 20px; /* Margen alrededor del card */
+    background-color: #ffffff; /* Fondo blanco para el card */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+}
+
+mat-card-header {
+    background-color: #f7f7f7; /* Fondo gris claro para el encabezado */
+    border-bottom: 2px solid #e0e0e0; /* Línea divisoria */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+    padding: 10px; /* Espaciado interno */
+}
+
+mat-card-title {
+    font-family: 'Roboto', sans-serif; /* Fuente para el título */
+    font-size: 24px; /* Tamaño de fuente del título */
+    color: #333; /* Color del título */
+    margin: 0; /* Sin margen */
+}
+
+mat-card-content {
+    font-family: 'Arial', sans-serif; /* Fuente para el contenido */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #555; /* Color del texto del contenido */
+}
+
+mat-card-content p {
+    margin-bottom: 15px; /* Espacio debajo de los párrafos */
+}
+
+ol {
+    margin-left: 20px; /* Indentación para la lista ordenada */
+}
+
+ol li {
+    margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+    position: relative; /* Para el pseudo-elemento */
+    padding-left: 20px; /* Espacio a la izquierda para los números */
+}
+
+ol li::marker {
+    color: #0056b3; /* Color para los números de la lista */
+    font-weight: bold; /* Negrita para los números */
+}
+
+ol li::before {
+    content: ''; /* Contenido vacío para crear un punto */
+    position: absolute;
+    left: 5px; /* Desplazamiento hacia la izquierda */
+    top: 8px; /* Ajuste vertical */
+    width: 6px; /* Ancho del punto */
+    height: 6px; /* Altura del punto */
+    background-color: #0056b3; /* Color del punto */
+    border-radius: 50%; /* Hacerlo redondo */
+}
+
+strong {
+    color: #0056b3; /* Color para el texto en negrita */
+}
