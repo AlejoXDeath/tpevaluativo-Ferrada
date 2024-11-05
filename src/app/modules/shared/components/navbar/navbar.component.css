@@ -36,18 +36,23 @@ mat-toolbar{
         background-color: rgb(5, 62, 250);
     }
 
-    #menuInicio{
+
+    .contenido {
         display: none;
     }
 
-    #menuProducto{
-        display: none;
+    span {
+        display: block;
     }
     .logo img{
-        width: 20px;
-        height: 20px;
+        width: 100px;
+        height: 100px;
+    }
+    .menuGeneral{
+        display: none;
     }
 }
+
 
 /* ENCAPSULA ESTILOS PARA PANTALLAS MÁS GRANDES -> ej.: computadora, televisor */
 @media (min-width: 700px){

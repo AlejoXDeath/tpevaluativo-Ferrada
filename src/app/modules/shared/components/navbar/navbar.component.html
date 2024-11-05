@@ -11,6 +11,7 @@
             <img src="../../../../../assets/Epic Steam Store.png" alt="Logo">
         </div>
     </nav>
+    <div class="menuGeneral">
     <!-- Menú desplegable para cuando la pantalla sea menor a 700px -->
     <button mat-button routerLink="/inicio" class="inicio">𝙸𝚗𝚒𝚌𝚒𝚘</button>
     <!-- Botón de Productos con menú desplegable -->
@@ -21,8 +22,21 @@
         <button mat-menu-item routerLink="/dlc">DLC</button>
         <button mat-menu-item routerLink="/soundtrack">Soundtracks</button>
     </mat-menu>
-
     <button mat-button routerLink="/soporte">𝚂𝚘𝚙𝚘𝚛𝚝𝚎</button>
+    <button id="menuAdmin" mat-button routerLink="/admin">Admin</button>
+</div>
+
+
+    <button id="menuSecciones" mat-button [matMenuTriggerFor]="producto"><mat-icon>menu</mat-icon></button>
+  <mat-menu #producto="matMenu">
+    <button mat-menu-item routerLink="/inicio">𝙸𝚗𝚒𝚌𝚒𝚘</button>
+    <!-- Botón de Productos con menú desplegable -->
+        <button mat-menu-item routerLink="/producto">𝙿𝚛𝚘𝚍𝚞𝚌𝚝𝚘𝚜</button>
+        <button mat-menu-item routerLink="/juego">𝙹𝚞𝚎𝚐𝚘𝚜</button>
+        <button mat-menu-item routerLink="/dlc">𝙳𝙻𝙲</button>
+        <button mat-menu-item routerLink="/soundtrack">𝚂𝚘𝚞𝚗𝚍𝚝𝚛𝚊𝚌𝚔𝚜</button>
+    <button mat-menu-item routerLink="/soporte">𝚂𝚘𝚙𝚘𝚛𝚝𝚎</button>
+  </mat-menu>
 
 
 
