@@ -11,7 +11,9 @@
       <th scope="col">Categoría</th>
       <th scope="col">Desarrollador</th>
       <th scope="col">Fecha de lanzamiento</th>
+      <th scope="col">Stock</th>
       <th scope="col">Acciones</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -31,6 +33,7 @@
       <td>{{ producto.categoria }}</td>
       <td>{{ producto.desarrollador }}</td>
       <td>{{ producto.edad }}</td>
+      <td>{{ producto.stock }}</td>
       
 
       <!-- Acciones -->
@@ -177,6 +180,11 @@
             placeholder="Ej.: Portada de CyberPunk"
           />
         </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese su stock:</label>
+          <input type="number" class="form-control" formControlName="stock"
+          placeholder="Ej.: 25">
+        </div>
       </div>
 
       <!-- ACCIONES DEL MODAL -->
@@ -307,6 +315,11 @@
             formControlName="alt"
             placeholder="{{ productoEdit.alt }}"
           />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ingrese su stock:</label>
+          <input type="number" class="form-control" formControlName="stock"
+          placeholder="{{ productoEdit.stock }}">
         </div>
       </div>
 
