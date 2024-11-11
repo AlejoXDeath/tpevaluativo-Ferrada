@@ -33,7 +33,7 @@ export class CarritoService {
   }
   private pedidosColleccion : AngularFirestoreCollection<Pedido>
 
-  private uid:string | null = null
+  private uId:string | null = null
 
   constructor(
     private servicioAuth:AuthService,
@@ -41,19 +41,19 @@ export class CarritoService {
     public servicioRutas:Router
   ) { 
     //Creamos la subcoleccion dentro de la coleccion de usuario y le damos ese valor a pedidosColeccion
-    this.pedidosColleccion=this.servicioFirestore.collection(`usuarios/${this.uid}/pedido`);
+    this.pedidosColleccion=this.servicioFirestore.collection(`usuarios/${this.uId}/pedido`);
   }
 
 
   iniciarCarrito(){
     this.servicioAuth.obtenerUid().then(uid =>{
-      this.uid = uid
+      this.uId = uid
 
-      if (this.uid === null) {
+      if (this.uId === null) {
         console.error("No se obtuvo el UID. Intente iniciar sesion")
         this.servicioRutas.navigate(["/inicio-sesion"])
       } else {
-        this.pedidosColleccion = this.servicioFirestore.collection(`usuarios/${this.uid}/pedido`)
+        this.pedidosColleccion = this.servicioFirestore.collection(`usuarios/${this.uId}/pedido`)
       }
     })
   }
